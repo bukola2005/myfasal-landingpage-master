@@ -1,0 +1,236 @@
+@import 'variable';
+@import 'utility';
+// gobal
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  overflow-x: hidden;
+  line-height: 1.6;
+  font-family: 'BR Firma', sans-serif;
+}
+html{
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+p{
+  font-weight: 400;
+  color: $primary-color;
+  font-size: 1.7rem;
+  line-height: 2;
+}
+a{
+  text-decoration: none;
+  color: $primary-color;
+}
+ul{
+  list-style: none;
+}
+button{
+  font-family:  'BR Firma', sans-serif;
+}
+img{
+  width: 100%;
+}
+
+header{
+  z-index: 10000;
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-around;
+  & #nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2.5rem 3%;
+
+    ul{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      li{
+        padding:  1rem 2.5rem;
+        font-size: 2rem;
+    
+      }
+      a{
+        text-decoration: none;
+        color: $primary-color;
+        border-bottom: 3px transparent solid;
+        padding-bottom:  0.5rem;
+        transition: border-color 0.5s;
+        -webkit-transition: border-color 0.5s;
+        -moz-transition: border-color 0.5s;
+        -ms-transition: border-color 0.5s;
+        -o-transition: border-color 0.5s;
+      
+        &:hover{
+          border-color: $medium-color;
+        }
+    }
+    }
+  }
+  .open-menu{
+    display: none;
+    color: $dark-color !important;
+  }
+  .close-menu{
+    display: none;
+    color: $primary-color !important;
+  }
+}
+
+#showcase{
+  padding: 4rem;
+  & .two-flex{
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    grid-gap: 5rem;
+    &:first-child{
+      line-height: 1.9;
+      h1{
+        font-size: 4rem;
+        font-weight: 400;
+      }
+      }
+    }
+
+  }
+
+  #pay{
+    & .pay-flex{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      li{
+        font-size: 4rem;
+        font-weight: 400;
+      }
+    }
+  }
+#saying{
+  background-color: $light-dark;
+}
+#loan{
+  background-color: $light-dark;
+}
+#bills{
+  & .flex{
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 5rem; 
+
+  }
+
+}
+ 
+#desposit{
+  & .flex{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 5rem; 
+  }
+}
+
+#steps{
+  padding: 0 3rem;
+
+  & .two-flex{
+    & div:first-child{
+      img{
+        margin: 0 auto;
+        width:70%
+      }
+    }
+
+    & div:last-child{
+      h2{
+        font-size: 4rem;
+      }
+      & .details-info{
+        & div:first-child{
+          display: flex;
+          align-items: center;
+          gap:2rem;
+          margin-top: 2rem;
+          h4{
+            font-size: 3.5rem;
+          }
+        }
+        & div:last-child{
+          display: flex;
+          align-items: center;
+          gap: 2rem;
+          div{
+            img{
+              width: 75%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#request{
+  background-color: $dark-color;
+  padding: 3.5rem;
+  & .two-flex{
+    & > div:first-child{
+      & h3{
+        font-size: 3.5rem;
+        color: $light-color;
+      }
+
+    }
+    & > div:last-child{
+      & p{
+        color: $light-color;
+      }
+      & > div:last-child{
+        display: flex;
+        align-content: center;
+        gap:3rem;
+      }
+    }
+  }
+}
+
+#footer{
+  padding: 2rem;
+  & .footer-flex{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr)) ;
+    grid-gap: 4rem;
+
+    ul{
+      line-height: 3;
+      li{
+        font-size: 1.6rem;
+      } 
+      .social .fab{
+        margin-right: 1.4rem;
+      // border: 2px #fff solid;
+      color: $light-color;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      height: 50px;
+      width: 50px;
+      line-height: 30px;
+      text-align: center;
+      padding: 1rem;
+      background-color: $dark-color;
+      
+      }
+    }
+  }
+}
+@import 'media';

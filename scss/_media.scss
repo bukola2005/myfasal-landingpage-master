@@ -1,0 +1,153 @@
+@media only screen and (max-width: 740px) {
+    .two-flex{
+      grid-template-columns: 100%;
+      img{
+      width: 100%;
+      }
+    }
+  .twoflex{
+    flex-direction: column;
+    img{
+      width: 100%;
+      }
+  }
+  .btn{
+    &-small{
+      margin-top: 3rem;
+      width: 100%;
+      padding: 2rem 0;
+    }
+  }
+  header{
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    & #nav{
+     ul{ 
+      position: fixed;
+      z-index: 1000;
+      top: 100px;
+      right: -100%;
+      flex-direction: column;
+      padding: 5rem 2.5rem;
+         width: 65%;
+          height: 550px;
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+          border-radius: 2rem;
+          background-color: $light-dark;
+          background: transparent;
+          backdrop-filter: blur(7px);
+          box-shadow: 0 5px 30px rgba(100, 101, 102,0.6);
+          transition: all 0.4s ease-in-out;
+          -webkit-transition: all 0.4s ease-in-out;
+          -moz-transition: all 0.4s ease-in-out;
+          -ms-transition: all 0.4s ease-in-out;
+          -o-transition: all 0.4s ease-in-out;
+
+          li:not(:last-child){
+            margin-bottom: 3rem;
+          }
+
+          a{
+            color: $dark-color;
+          }
+
+
+          &.show{
+            right: 0;
+          }
+         
+     }
+  }
+
+  .open-menu{
+    display: block;
+    color: $dark-color !important;
+    cursor: pointer; 
+    background-color: $light-color;
+
+    &.notShowMenu {
+      display: none;
+      }
+  }
+  
+  .close-menu{
+    cursor: pointer;
+    color: $dark-color;
+    background-color: $light-color;
+
+    &.notShowMenu {
+      display: block;
+      }
+  }
+      }
+
+  #showcase{
+    &:first-child{
+      input{
+        margin-right: 9rem; 
+      }
+    }
+  }
+
+  #pay{
+    & .pay-flex{
+      flex-direction: column;
+    }
+    li:not(:last-child){
+      margin-bottom: 4rem;
+    }
+  }
+  
+  #showcase .two-flex,
+  #bills  .flex,
+  #desposit .flex{
+    grid-template-columns: 100%;
+  }
+}
+
+@media only screen and (max-width:550px){
+  .logo{
+    font-size: 3rem;
+   }
+   .two-flex1{
+    flex-direction: column;
+   }
+  
+   header{
+    #nav{
+      ul{
+        width: 100%;
+      }
+    }
+   }
+   .btn{
+    &-small{
+      margin-top: 3rem;
+      width: 100%;
+      padding: 2rem 0;
+    }
+  }
+  
+}
+@media only screen and (max-width:1040px){
+  html{
+    scroll-behavior: smooth;
+    font-size: 50%;
+  }
+  .btn{
+    &-small{
+      margin-top: 3rem;
+      width: 100%;
+      padding: 2rem 0;
+    }
+  }
+  .two-flex1{
+    width: 50%;
+   }
+}
+

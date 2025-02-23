@@ -1,0 +1,199 @@
+.container{
+  max-width: $width;
+  padding: 0  1.5rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.logo{
+  font-family: 'Chillax', sans-serif;
+  font-weight: 700;
+  font-size: 4rem;
+}
+
+.two-flex{
+  display: grid;
+  grid-template-columns: repeat(2,2fr);
+  grid-gap: 5rem;
+  align-items: center;
+}
+.secondary-color{
+  color: $secondary-color;
+}
+%main-color{
+  color: $primary-color;
+}
+.main-color{
+  &-1{
+    @extend %main-color;
+  font-weight: 400;
+  font-size: 3.5rem;
+  }
+  &-2{
+    @extend %main-color;
+    font-weight: 700;
+    font-size: 2.5rem;
+
+  }
+
+}
+
+
+.circle{
+  background-color: $secondary-color;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  // border: 2px solid $primary-color;
+  margin-left: 1rem;
+}
+.text-center{
+  text-align: center;
+}
+.text-shadow{
+  color: $light-color;
+  -webkit-text-stroke-width: 2px; 
+  -webkit-text-stroke-color: $secondary-color;
+  stroke: $secondary-color;
+}
+
+// button
+%btn{
+  display: inline-block;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  
+
+}
+
+.btn{
+  &-main{
+    @extend %btn;
+    padding: 1.5rem 2.5rem;
+    background-color: $secondary-color;
+    color: $light-color ;
+    font-weight: 700;
+    font-size: 1.5rem;
+    // margin-bottom: 3rem;
+  }
+  &-small{
+    @extend %btn;
+    padding: 1.5rem 2rem;
+    background-color: $secondary-color;
+    color: $light-color ;
+    font-weight: 400;
+    // font-size: 1rem;
+  }
+
+}
+
+
+ button[class^='btn']:hover{
+  background-color: $medium-color;
+ }
+
+ //  padding
+.py{
+  &-1{
+    padding: 1rem 0;
+  }
+  &-2{
+    padding: 2rem 0;
+  }
+  &-3{
+    padding: 3rem 0;
+  }
+  &-4{
+    padding: 4rem 0;
+  }
+}
+//  margin
+.my{
+  &-1{
+    margin: 1rem 0;
+  }
+  &-2{
+    margin: 2rem 0;
+  }
+  &-3{
+    margin: 3rem 0;
+  }
+  &-4{
+    margin: 4rem 0;
+  }
+}
+
+.twoflex{
+  background-color: rgb(250, 250, 251);
+  display: flex;
+  align-items: center;
+  padding: 2.5rem 3rem;
+  border-radius: 20px;
+
+  img{
+    width: 40%;
+  }
+}
+
+.outter-bill{
+  background-color: $light-dark;
+ padding: 2.5rem 3rem;
+ border-radius: 20px;
+img  {
+ width: 20%;
+}
+h2{
+ color: $primary-color;
+font-size: 2.5rem;
+font-weight: 400;
+margin-top: 1rem;
+}
+}
+%join{
+  padding: 2rem 1rem;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+
+  input {
+    outline: 0;
+    border: 0;
+    margin-right: 19rem;
+
+  }
+}
+
+.join{
+  &-a{
+    @extend %join;
+    border: 1px solid $light-dark;
+  }
+  &-b{
+    @extend %join;
+    background-color: $shadow-color;
+    border: 1px solid $dark-color;
+    input{
+      outline: 0;
+      border: 0;
+      background-color: transparent;
+      color: rgba(255, 255, 255, 0.8);
+      padding: 2rem;
+    }
+  }
+}
+ 
