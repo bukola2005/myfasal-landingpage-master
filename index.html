@@ -28,12 +28,66 @@
 
   gtag('config', 'G-3WB5656204');
 </script>
+  <style>
+    /* Performance Optimization & Animations */
+    .wallet-balance-card {
+      opacity: 0;
+      animation: fadeUp 0.8s ease-out forwards;
+      will-change: transform, opacity;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Button Micro-interactions */
+    .btn-main, .btn-small {
+      transition: transform 0.15s ease-in-out, background-color 0.3s !important;
+      will-change: transform;
+    }
+    
+    .btn-main:active, .btn-small:active {
+      transform: scale(0.95) !important;
+    }
+
+    /* Override mobile menu to use transform instead of layout repaints */
+    @media only screen and (max-width: 740px) {
+      header #nav ul {
+        right: 0 !important; 
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out !important;
+        will-change: transform, opacity;
+        opacity: 0;
+        pointer-events: none;
+      }
+      
+      header #nav ul.translate-x-0 {
+        transform: translateX(0);
+        opacity: 1;
+        pointer-events: auto;
+      }
+      
+      header.menu-open .open-menu {
+        display: none !important;
+      }
+      header.menu-open .close-menu {
+        display: block !important;
+      }
+    }
+  </style>
 </head>
 <body>
 <header>
 <nav id="nav">
 <h2 class="logo"><span class="secondary-color">My</span><span class="text-shadow">faysal</span></h2>
-<ul class="meun">
+<ul class="meun" id="mobile-nav-menu">
   <li><a href="#" class="list-item" >Business</a></li>
   <li><a href="#" class="list-item">Features</a></li>
   <li><a href="#" class="list-item">Company</a></li>
@@ -43,13 +97,13 @@
 </div>
 </ul>
 </nav>
-<i class="fa-solid fa-bars fa-2x open-menu"></i>
-<i class="fa-solid fa-xmark fa-2x  close-menu"></i>
+<i class="fa-solid fa-bars fa-2x open-menu" id="mobile-menu-btn"></i>
+<i class="fa-solid fa-xmark fa-2x  close-menu" id="mobile-close-btn"></i>
 </header>
 
 <section id="showcase" class="py-2">
   <div class="container">
-  <div class="two-flex">
+  <div class="two-flex wallet-balance-card">
   <div>
     <h1>Create and manage <span class="secondary-color">contribution groups!</span></h1>
     <p class="py-2">spend, save and manage your money,<span class="secondary-color">all in one place.</span> Open a full Nigerian bank account from your phone,for free. We are on a mission-join us!</p>
